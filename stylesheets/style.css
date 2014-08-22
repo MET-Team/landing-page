@@ -56,6 +56,7 @@ body{
 .wrapper{
   min-height: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .page-section{
@@ -117,6 +118,7 @@ body{
   font-weight: normal;
   font-family: 'MuseoSansCyrl-300';
   padding: 0 20px;
+  outline: medium none;
 }
 .page-section.section-main .scroll-down{
   position: absolute;
@@ -133,6 +135,73 @@ body{
 
 .page-section.section-slider{
   background: none #e6e6e6;
+  min-height: 800px;
+  text-align: center;
+}
+.page-section.section-slider .slider-content{
+  display: inline-block;
+}
+.page-section.section-slider .slider-content .slider-list{
+  white-space: nowrap;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.page-section.section-slider .slider-item{
+  width: 600px;
+  border-radius: 10px;
+  background: none #f2f2f2;
+  min-height: 600px;
+  position: relative;
+  padding: 45px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 60px;
+  opacity: 0.5;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.page-section.section-slider .slider-item:last-child{
+  margin-right: 0;
+}
+.page-section.section-slider .slider-item.active{
+  opacity: 1;
+  position: relative;
+  cursor: default;
+}
+.page-section.section-slider .slider-item .footer{
+  background: none #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 70px;
+  border-radius: 0 0 10px 10px;
+}
+.page-section.section-slider .slider-item .footer .title{
+  font-size: 24px;
+  font-family: 'MuseoSansCyrl-700';
+}
+.page-section.section-slider .slider-item .footer .slider-arrow{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 75px;
+  cursor: pointer;
+  opacity: 0.5;
+  display: none;
+}
+.page-section.section-slider .slider-item .footer .slider-arrow.slider-prev{
+  left: 0;
+  background: url('../images/arrows/slider-arrow-prev.png') no-repeat center center transparent;
+}
+.page-section.section-slider .slider-item .footer .slider-arrow.slider-next{
+  right: 0;
+  background: url('../images/arrows/slider-arrow-next.png') no-repeat center center transparent;
+}
+.page-section.section-slider .slider-item.active .footer .slider-arrow{
+  display: block;
 }
 
 .page-section.section-about{
@@ -144,6 +213,7 @@ body{
 
 .page-section.section-features .features-list{
   display: table;
+  width: 100%;
   margin-top: 60px;
 }
 .page-section.section-features .features-list .feature-item{
@@ -202,11 +272,11 @@ body{
 }
 .page-section.section-stages .stage-arrow.stage-prev{
   left: 0;
-  background: url('../images/stage-arrow-prev.png') no-repeat center center transparent;
+  background: url('../images/arrows/stage-arrow-prev.png') no-repeat center center transparent;
 }
 .page-section.section-stages .stage-arrow.stage-next{
   right: 0;
-  background: url('../images/stage-arrow-next.png') no-repeat center center transparent;
+  background: url('../images/arrows/stage-arrow-next.png') no-repeat center center transparent;
 }
 
 .page-section.section-skills{
@@ -240,11 +310,11 @@ body{
 }
 .page-section.section-clients .clients-arrow.clients-prev{
   left: 0;
-  background: url('../images/clients-arrow-prev.png') no-repeat center center transparent;
+  background: url('../images/arrows/clients-arrow-prev.png') no-repeat center center transparent;
 }
 .page-section.section-clients .clients-arrow.clients-next{
   right: 0;
-  background: url('../images/clients-arrow-next.png') no-repeat center center transparent;
+  background: url('../images/arrows/clients-arrow-next.png') no-repeat center center transparent;
 }
 .page-section.section-clients .clients-item{
   font-size: 24px;
@@ -290,6 +360,7 @@ body{
   background: none #e61739;
   width: 214px;
   text-align: center;
+  outline: medium none;
 }
 
 .page-section.section-contacts .contacts-list{
