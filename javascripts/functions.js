@@ -21,8 +21,6 @@ $(function(){
     var scrollTop = $(document).scrollTop(),
       activeScrollItemOffset = 0;
 
-    console.log(scrollTop)
-
     if(scrollTop >= 550){
       activeScrollItemOffset = 0;
     }else if(scrollTop <= 200 || scrollTop == 0) {
@@ -33,6 +31,27 @@ $(function(){
 
     $('.page-section.section-slider .slider-item.active').css({
       top: activeScrollItemOffset
+    });
+  }
+
+  function hideUrlBar() {
+    if (window.pageYOffset==0) {
+      window.scrollTo(0, 1);
+      setTimeout(function() { hideUrlBar(); }, 3000);
+    }
+  }
+
+  function prepare3DObjects(){
+    $('.section-slider .slider-list .slider-item').each(function(){
+      var index = $(this).index();
+      $(this).find('.obj-container').attr('id', "3d-"+ index);
+
+      obj = new object2vrPlayer("3d-"+ index);
+      skin = new object2vrSkin(obj);
+
+      obj.readConfigUrl("3d/"+ index +"/html_out.xml");
+
+      hideUrlBar();
     });
   }
 
@@ -48,6 +67,8 @@ $(function(){
     start: 1,
     slideItemNavigation: true
   });
+
+  prepare3DObjects();
 
   prepareActiveScrollItem();
   ymaps.ready(prepareMap);
@@ -69,5 +90,11 @@ $(function(){
   $(document).scroll(function(){
     prepareActiveScrollItem();
   });
+
+//  $('.section-slider .slider-list .slider-item.active .obj-container').hover(function(){
+//    $(this).parent().find('.footer').fadeOut(300);
+//  },function(){
+//    $(this).parent().find('.footer').fadeIn(300);
+//  });
 
 });

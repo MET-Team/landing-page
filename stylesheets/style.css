@@ -100,6 +100,14 @@ body{
   top: 37px;
   font-family: 'MuseoSansCyrl-700';
 }
+.page-section.section-main .phone{
+  font-size: 18px;
+  position: absolute;
+  right: 47px;
+  top: 37px;
+  font-family: 'MuseoSansCyrl-700';
+}
+
 .page-section.section-main .call-order{
   margin-top: 30px;
   text-align: center;
@@ -153,7 +161,6 @@ body{
   background: none #f2f2f2;
   min-height: 600px;
   position: relative;
-  padding: 45px;
   text-align: center;
   display: inline-block;
   margin-right: 60px;
@@ -170,6 +177,27 @@ body{
   position: relative;
   cursor: default;
 }
+
+.page-section.section-slider .slider-item .obj-container{
+  width: 600px;
+  height: 600px;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.page-section.section-slider .slider-item .obj-container-overlay{
+  position: absolute;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.page-section.section-slider .slider-item.active .obj-container-overlay{
+  display: none;
+}
+
 .page-section.section-slider .slider-item .footer{
   background: none #fff;
   position: absolute;
@@ -178,6 +206,7 @@ body{
   right: 0;
   padding: 40px 70px;
   border-radius: 0 0 10px 10px;
+  z-index: 12;
 }
 .page-section.section-slider .slider-item .footer .title{
   font-size: 24px;

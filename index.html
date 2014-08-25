@@ -5,13 +5,28 @@
     <title>Landing</title>
     <link rel="stylesheet" href="stylesheets/reset.css" />
     <link rel="stylesheet" href="stylesheets/style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <script src="javascripts/jquery-2.1.1.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <script type="text/javascript" src="javascripts/3d/object2vr_player.js"></script>
+    <script type="text/javascript" src="javascripts/3d/skin.js"></script>
+
+    <script src="javascripts/jCarousel.js"></script>
+    <script src="javascripts/functions.js"></script>
+
   </head>
-  <body>
+  <body onorientationchange="hideUrlBar();">
     <div class="wrapper">
       <section class="page-section section-main">
         <div class="copyright">venderman</div>
-        <div class="section-title">ЛУЧШЕ ВСЕХ ДЕЛАЕМ <span class="red">3D</span> СЪЕМКУ</div>
-        <div class="section-sub-title">Свяжитесь с нашим менеджером, чтобы узнать больше о наших услугах</div>
+        <div class="phone">(495) 777-77-99</div>
+        <div class="section-title">ДЕЛАЕМ ПРОФЕССИОНАЛЬНУЮ <span class="red">3D</span> СЪЕМКУ</div>
+        <div class="section-sub-title">Лучше 1 раз увидеть, чем 100 раз услышать или прочитать</div>
 
         <div class="call-order">
           <input type="button" value="Заказать звонок" />
@@ -26,8 +41,10 @@
       <section class="page-section section-slider">
         <div class="slider-content">
           <div class="slider-list">
+
             <div class="slider-item">
-              <img src="images/temp/slider-img.png" alt="" />
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
 
               <div class="footer">
                 <div class="slider-prev slider-arrow"></div>
@@ -38,7 +55,56 @@
             </div>
 
             <div class="slider-item">
-              <img src="images/temp/slider-img.png" alt="" />
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
+
+              <div class="footer">
+                <div class="slider-prev slider-arrow"></div>
+                <div class="slider-next slider-arrow"></div>
+
+                <div class="title">Мотоцикл</div>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
+
+              <div class="footer">
+                <div class="slider-prev slider-arrow"></div>
+                <div class="slider-next slider-arrow"></div>
+
+                <div class="title">Медицинское кресло</div>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
+
+              <div class="footer">
+                <div class="slider-prev slider-arrow"></div>
+                <div class="slider-next slider-arrow"></div>
+
+                <div class="title">Медицинское кресло</div>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
+
+              <div class="footer">
+                <div class="slider-prev slider-arrow"></div>
+                <div class="slider-next slider-arrow"></div>
+
+                <div class="title">Медицинское кресло</div>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
 
               <div class="footer">
                 <div class="slider-prev slider-arrow"></div>
@@ -49,7 +115,32 @@
             </div>
 
             <div class="slider-item">
-              <img src="images/temp/slider-img.png" alt="" />
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
+
+              <div class="footer">
+                <div class="slider-prev slider-arrow"></div>
+                <div class="slider-next slider-arrow"></div>
+
+                <div class="title">Медицинское кресло</div>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
+
+              <div class="footer">
+                <div class="slider-prev slider-arrow"></div>
+                <div class="slider-next slider-arrow"></div>
+
+                <div class="title">Медицинское кресло</div>
+              </div>
+            </div>
+
+            <div class="slider-item">
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
 
               <div class="footer">
                 <div class="slider-prev slider-arrow"></div>
@@ -60,7 +151,8 @@
             </div>
 
             <div class="slider-item">
-              <img src="images/temp/slider-img.png" alt="" />
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
 
               <div class="footer">
                 <div class="slider-prev slider-arrow"></div>
@@ -71,7 +163,8 @@
             </div>
 
             <div class="slider-item">
-              <img src="images/temp/slider-img.png" alt="" />
+              <div class="obj-container"></div>
+              <div class="obj-container-overlay"></div>
 
               <div class="footer">
                 <div class="slider-prev slider-arrow"></div>
@@ -80,23 +173,24 @@
                 <div class="title">Медицинская кровать</div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
       <section class="page-section section-features">
-        <div class="section-title">Особенности</div>
+        <div class="section-title">ВЫ ПОЛУЧИТЕ</div>
 
         <div class="features-list">
           <div class="feature-item">
             <div class="ico">
               <img src="images/features/ico-1.png" alt="" width="70" height="54" />
             </div>
-            <div class="title">Реалистичная съемка</div>
+            <div class="title">Реалистичную съемку</div>
             <div class="text">
-              Портрет, пейзаж, а также «спонтанные
-              моменты» и «ощущения места». Все
-              можно посмотреть в отдельных
+              Покупатели смогут детально
+              разобрать особенности вашего
+              продукта, приблизить его и покрутить
             </div>
           </div>
 
@@ -104,11 +198,11 @@
             <div class="ico">
               <img src="images/features/ico-2.png" alt="" width="70" height="56" />
             </div>
-            <div class="title">Все на высшем уровне</div>
+            <div class="title">Работу на высшем уровне</div>
             <div class="text">
-              Портрет, пейзаж, а также «спонтанные
-              моменты» и «ощущения места». Все
-              можно посмотреть в отдельных
+              3D съемка позволит покупателю
+              гораздо больше узнать о продукте.
+              Это гарантированно увеличит продажи
             </div>
           </div>
 
@@ -116,11 +210,11 @@
             <div class="ico">
               <img src="images/features/ico-3.png" alt="" width="40" height="70" />
             </div>
-            <div class="title">Для любых устройств</div>
+            <div class="title">3D на всех устройствах</div>
             <div class="text">
-              Портрет, пейзаж, а также «спонтанные
-              моменты» и «ощущения места». Все
-              можно посмотреть в отдельных
+              3D будет работать на всех устройствах,
+              в том числе на смартфонах и планшетах
+              без различных неудобств
             </div>
           </div>
         </div>
@@ -137,11 +231,11 @@
             </div>
           </div>
           <div class="stage-col stage-col-content">
-            <div class="title">1. Сначала доставляем в студию</div>
+            <div class="title">Делаем 3D и 360&deg;  съемки</div>
             <div class="text">
-              Портрет, пейзаж, а также «спонтанные моменты»
-              и «ощущения места». Все можно посмотреть в отдельных
-              кинокартинах
+              Можем сделать съемку продукта со всех ракурсов и съемку
+              для полного поворота в 360 гралусов. Каждая съемка ведется
+              профессионально, редактируется каждый элемент
             </div>
           </div>
         </div>
@@ -199,12 +293,5 @@
       <section class="page-section section-map" id="map-canvas"></section>
 
     </div>
-
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script src="javascripts/jCarousel.js"></script>
-    <script src="javascripts/functions.js"></script>
-
   </body>
 </html>
